@@ -7,105 +7,94 @@
 <title>Pepín y Fresquito</title>
 <style>
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: #fffaf2;
-  color: #304735;
-  font-family: Georgia, serif;
-  text-align: center;
-}
-header {
-  background: #28543c;
-  color: white;
-  padding: 35px 15px;
-}
-h1 { font-size: 2.5rem; margin: 12px 0; }
-nav {
-  background: #eee4d4;
-  padding: 18px 10px;
-}
-nav a {
-  color: #28543c;
-  margin: 8px;
-  display: inline-block;
-  font-weight: bold;
-  text-decoration: none;
-}
-main {
-  max-width: 850px;
-  margin: auto;
-  padding: 30px 18px;
+  background: #062765;
+  font-family: Arial, sans-serif;
 }
 .portada {
   width: 100%;
-  max-width: 390px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px #0002;
+  min-height: 75vh;
+  display: block;
+  object-fit: contain;
+  background: #092d75;
 }
-section { margin-bottom: 55px; }
-h2 { color: #a33838; }
-p { line-height: 1.8; }
+.botones {
+  background: linear-gradient(135deg,#08265f,#123d90);
+  padding: 45px 20px 55px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.boton {
+  background: white;
+  color: #113b83;
+  border: 4px solid #c91d30;
+  border-radius: 25px;
+  padding: 25px 20px;
+  width: 260px;
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px #0003;
+}
+.boton .simbolo { font-size: 34px; }
+.boton:hover {
+  background: #e8f5ff;
+  transform: translateY(-3px);
+}
+.boton.inactivo {
+  opacity: .85;
+  cursor: default;
+}
 footer {
-  background: #28543c;
   color: white;
-  padding: 25px;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+@media(max-width:600px) {
+  .portada { min-height: 0; }
+  .botones { padding: 25px 15px; gap: 15px; }
+  .boton { width: 100%; min-height: 90px; }
 }
 </style>
 </head>
 <body>
 
-<header>
-  <p>✦ ❄ ✦</p>
-  <h1>Pepín y Fresquito</h1>
-  <p>Un cuento de Navidad lleno de amistad y magia</p>
-</header>
-
-<nav>
-  <a href="#cuento">El cuento</a>
-  <a href="#video">El vídeo</a>
-  <a href="#calendario">Calendario de Adviento</a>
-</nav>
-
 <main>
-  <section id="cuento">
-    <img class="portada" src="portada.png"
-         alt="Portada de Pepín y Fresquito">
-    <h2>Bienvenidos a nuestra historia</h2>
-    <p>
-      Una aventura navideña para quienes
-      creen en la amistad y en la magia
-      de la Navidad.
-    </p>
-    <p>
-      Descubre el mundo de Pepín y Fresquito
-      y acompáñalos en su historia.
-    </p>
-  </section>
+  <img class="portada" src="portada.png"
+       alt="Pepín y Fresquito. El corazón de la Navidad">
 
-  <section id="video">
-    <h2>Conoce nuestra historia</h2>
-    <p>
-      Aquí podrás acceder al vídeo de
-      presentación del cuento.
-    </p>
-    <p>Próximamente.</p>
-  </section>
+  <div class="botones">
+    <div class="boton inactivo">
+      <span class="simbolo">▶</span>
+      Ver el vídeo
+    </div>
 
-  <section id="calendario">
-    <h2>Calendario de Adviento</h2>
-    <p>
-      Una casa con 24 ventanas,
-      24 días de sorpresas y juegos
-      para disfrutar de la Navidad.
-    </p>
-    <p>Próximamente.</p>
-  </section>
+    <div class="boton inactivo">
+      <span class="simbolo">❄</span>
+      Calendario de Adviento
+    </div>
+
+    <div class="boton inactivo">
+      <span class="simbolo">📖</span>
+      Comprar el cuento en Amazon
+    </div>
+  </div>
 </main>
 
 <footer>
-  Pepín y Fresquito · La magia de la Navidad
+  Pepín y Fresquito · El corazón de la Navidad
 </footer>
 
 </body>
